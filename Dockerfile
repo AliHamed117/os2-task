@@ -2,11 +2,9 @@ FROM python:3.12-slim
 
 WORKDIR /image
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
 COPY image.py .
 
-EXPOSE 5000
+RUN pip install flask==3.0.3
+
 
 CMD ["python", "image.py"]
