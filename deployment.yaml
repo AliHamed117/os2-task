@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-python-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: os2-task
+  template:
+    metadata:
+      labels:
+        app: os2-task
+    spec:
+      containers:
+      - name: my-python-container
+        image: os2-task:latest
+        ports:
+        - containerPort: 5000

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-python-pod
+spec:
+  containers:
+  - name: my-python-container
+    image: os2-task:latest
+    ports:
+    - containerPort: 5000
