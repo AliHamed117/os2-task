@@ -1,10 +1,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: my-python-pod
+  name: pod1
+  lables:
+   lable-name: "t1"
+
 spec:
   containers:
-  - name: my-python-container
+  - name: container1
     image: alihaamed17/os2-task:latest
-    ports:
-    - containerPort: 5000
+    resources:
+     limits:
+      memory: "512Mi"
+      cpu: "1"
