@@ -5,6 +5,6 @@ metadata:
 spec:
   containers:
   - name: my-python-container
-    image: os2-task:latest
+    image: alihaamed17/os2-task:latest
     ports:
     - containerPort: 5000
